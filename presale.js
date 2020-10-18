@@ -65,14 +65,6 @@ const accountInterval1 = setInterval(async function() {
 }, 2000) //executed every 3000ms(3 seconds)
 
 async function load() {
-  const _balof= await tokenInstance.methods.balanceOf(myaddress).call()
-    document.getElementById("balof").innerHTML=roundToFour(_balof/1000000000000000000)
-
-  const _price= await contractInstance.methods.tokenPrice().call()
-    document.getElementById("price").innerHTML=roundToFour(web3.utils.fromWei(_price))
-
-  const _matterbalance= await contractInstance.methods.getTokenBalance().call()
-    document.getElementById("available").innerHTML=roundToTwo(_matterbalance/1000000000000000000)
 }
 
 async function invest() {
