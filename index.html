@@ -13,20 +13,20 @@
     <title>Daimond</title>
 </head>
 <body>
-    
+
     <!-- Header -->
     <div class="navigation-wrap start-header start-style">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-md navbar-light">
-                    
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>    
-                        
+
+                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        
+
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto py-4 py-md-0">
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -38,12 +38,12 @@
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="#">Pools</a>
                                 </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 thpart">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 thpart" id="methamask_status">
                                     <a class="nav-link nav-btn" href="#">Approve Metamask <img src="images/nav-btn-ic.png" alt=""></a>
                                 </li>
                             </ul>
-                        </div>                        
-                    </nav>      
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -75,17 +75,17 @@
                                 <div class="form-group">
                                     <label>From</label>
                                     <div class="mng-bx">
-                                        <input type="text" name="" placeholder="1.000.000" class="form-control">
+                                        <input id="eth_amount" type="text" name="" value="1" class="form-control">
                                         <img src="images/d-shp1.png" alt="">
-                                        <span>SHX</span>
+                                        <span>ETH</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Amount</label>
                                     <div class="mng-bx">
-                                        <input type="text" name="" placeholder="1.000.000" class="form-control">
+                                        <input id="dim_amount" type="text" name="" value="10" class="form-control">
                                         <img src="images/d-shp2.png" alt="">
-                                        <span>EHX</span>
+                                        <span>DIM</span>
                                     </div>
                                     <!-- <div class="mng-bx">
                                         <div class="dropdown">
@@ -102,9 +102,8 @@
                                     </div> -->
                                 </div>
 
-                                <h4>Receive <span><img src="images/d-shp2.png" alt=""> <strong>1.000.000</strong> SHX</span></h4>
-
-                                <a href="#" class="btn-tras">Transform</a>
+                                <h4>Receive <span><img src="images/d-shp2.png" alt=""> <strong id="receive_amount">10</strong>DIM</span></h4>
+                                <a class="btn btn-tras" style="color: white; cursor: pointer;" onclick="invest()">Transform</a>
                             </form>
 
                             <img src="images/diamond-1.png" alt="" class="frmshp1">
@@ -233,7 +232,7 @@
                             </div>
                             <a href="#" class="btn-tras btn-withdraw">Withdraw</a>
 
-                            <img src="images/diamond-1.png" alt="" class="frmshp1 frmshp3"> 
+                            <img src="images/diamond-1.png" alt="" class="frmshp1 frmshp3">
                         </div>
                     </div>
                 </div>
@@ -309,7 +308,7 @@
                             </div>
                             <a href="#" class="btn-tras btn-withdraw">Withdraw</a>
 
-                            <img src="images/diamond-1.png" alt="" class="frmshp1 frmshp3"> 
+                            <img src="images/diamond-1.png" alt="" class="frmshp1 frmshp3">
                         </div>
                     </div>
                 </div>
@@ -422,8 +421,8 @@
 
 
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.js"></script> 
-    <script type="text/javascript" src="js/popper.min.js"></script> 
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
     <script type="text/javascript" src="js/8db2e95406.js"></script>
@@ -436,5 +435,8 @@
         });
         /* ** End Check Payment ** */
     </script>
+    <script type="text/javascript" src="js/web3.min.js"></script>
+    <script type="text/javascript" src="js/presale.js"></script>
+    <script type="text/javascript" src="js/swap.js"></script>
 </body>
 </html>
