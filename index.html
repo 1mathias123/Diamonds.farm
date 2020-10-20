@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-    <title>Diamond</title>
+    <title>Daimond</title>
 </head>
 <body>
 
@@ -39,7 +39,7 @@
                                     <a class="nav-link" href="#">Pools</a>
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 thpart" id="methamask_status">
-                                    <a class="nav-link nav-btn" href="#">Approve Metamask <img src="images/nav-btn-ic.png" alt=""></a>
+                                    <a class="nav-link nav-btn" onclick="approveMethamask()">Approve Metamask <img src="images/nav-btn-ic.png" alt=""></a>
                                 </li>
                             </ul>
                         </div>
@@ -57,7 +57,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="banner-txt">
                         <h1>Shine Bright Like A Diamond</h1>
-                        <p>Diamond Farm is the easiest way to stake your crypto and earn huge rewards with no real risk. Rewards are paid in DMD, an ERC-20 token with a cap of 20,000. 5,000 DMD tokens will be sold during the presale, 4,000 DMD, along with 400 ETH will serve as liquidity on Uniswap, 1,000 DMD are reserved for the team, and the remaining 10,000 DMD tokens can be earned through staking. The best investors realize that a passive investment strategy gives them complete leverage and control, multiplying their holdings effortlessly. So sit back, relax, and watch your crypto compound with Diamond Farm!</p>
+                        <p>Diamond Farm is the easiest way to stake your crypto and earn huge rewards with no real risk. Rewards are paid in DMD, an ERC-20 token with a cap of 20,000. 5,000 DMD tokens will be sold during the presale, 4,000 DMD, along with 400 ETH will serve as liquidity on Uniswap, 1,000 DMD are reserved for the team, and the remaining 10,000 DMD tokens can be earned through staking. The best investors realize that a passive investment strategy gives them complete leverage and control, multiplying their holdings effortlessly. So sit back, relax, and watch your crypto compound with Diamond Farm!" </p>
 
                         <div class="btn-group">
                             <a href="https://medium.com/@diamondfarm/diamond-farm-dmd-d46e0cd46664" class="btn-main">Learn More</a>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <div class="banner-frm-block">
+                    <div class="banner-frm-block  invest-form-blured">
                         <div class="banner-frm">
                             <h1>Token Sale</h1>
 
@@ -85,7 +85,7 @@
                                     <div class="mng-bx">
                                         <input id="dim_amount" type="text" name="" value="10" class="form-control">
                                         <img src="images/DiamondLogo.png" alt="">
-                                        <span>DMD</span>
+                                        <span>DIM</span>
                                     </div>
                                     <!-- <div class="mng-bx">
                                         <div class="dropdown">
@@ -102,8 +102,8 @@
                                     </div> -->
                                 </div>
 
-                                <h4>Receive <span><img src="images/DiamondLogo.png" alt=""> <strong id="receive_amount">10</strong> DMD</span></h4>
-                                <a class="btn btn-tras" style="color: white; cursor: pointer;" onclick="invest()">Transform</a>
+                                <h4>Receive <span><img src="images/DiamondLogo.png" alt=""> <strong id="receive_amount">10</strong>DIM</span></h4>
+                                <a class="btn btn-tras invest-btn" id="invest" style="color: white; cursor: pointer;" onclick="approveMethamask()">Unlock Wallet</a>
                             </form>
 
                             <img src="images/diamond-1.png" alt="" class="frmshp1">
@@ -122,40 +122,32 @@
     <section class="pools-wrp">
         <div class="container">
             <h2>Pools</h2>
-            <p>Diamond Farm pools will offer 10,000 DMD for staking rewards. Staking is 100% FREE and will always be FREE with no rewards going to the developers. We believe that investors deserve all the DMD they stake.</p>
+            <p>Diamond Farm pools will offer 10,000 DMD for staking rewards. Staking is 100% FREE and will always be FREE with no rewards going to the developers. We believe that investors deserve all the DMD they stake. </p>
 
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-lg-4">
+                <div class="col-md-6 col-sm-6 col-lg-4 blured">
                     <div class="pool-block">
                         <div class="pool-head">
-                            <h3>DIAMOND/ETH<a href="https://diamonds.farm/">Project Site <i class="fal fa-arrow-right"></i></a></h3>
+                            <h3>Alpha Pool <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
                         </div>
 
                         <div class="pool-img">
                             <img src="images/pool-img.png" alt="">
 
-                            <h4>0.000 <span>Diamonds Earned</span></h4>
+                            <h4><div id="rewards1">0.000</div><span>Alpha Earned</span></h4>
 
-                            <a href="#" class="btn-tras">Unlock Wallet</a>
+                            <a href="#" class="btn-tras locked-wallet" onclick="approveMethamask()">Unlock Wallet</a>
 
-                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span>0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span id="stakedBalance1">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> APY <span id="apy1">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Total Syrup Staked <span id="totalStaked1">0.000</span></h5>
 
-                            <div class="ppol-dt">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>APY: - Total Pickaxes Staked: <span>0.000</span></td>
-                                            <td>0.000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
                             <div class="pool_stake_unstake">
-                                <a href="#" class="btn-tras">Approve</a>
-                                <input type="number" name="" class="form-control">
-                                <a href="#" class="btn-tras">Unstake</a>
+                                <a class="btn-tras" id="approve_or_stake1" onclick="stake(1)">Approve</a>
+                                <input type="number" name="" id="tokenAmount1" class="form-control">
+                                <a class="btn-tras" onclick="unstake(1)">Unstake</a>
                             </div>
-                            <a href="#" class="btn-tras btn-withdraw">Withdraw</a>
+                            <a class="btn-tras btn-withdraw" onclick="harvest(1)">Withdraw</a>
                             <img src="images/diamond-1.png" alt="" class="frmshp1">
                             <!-- <img src="images/diamond-1.png" alt="" class="frmshp1 frmshp3"> -->
                             <!-- <img src="images/diamond-2.png" alt="" class="frmshp2"> -->
@@ -163,188 +155,143 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-lg-4">
+                <div class="col-md-6 col-sm-6 col-lg-4 blured">
                     <div class="pool-block">
                         <div class="pool-head">
-                            <h3>YIELD/ETH <a href="https://yield-farming.io/">Project Site <i class="fal fa-arrow-right"></i></a></h3>
+                            <h3>Alpha Pool <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
                         </div>
 
                         <div class="pool-img">
                             <img src="images/pool-img.png" alt="">
 
-                            <h4>0.000 <span>Diamonds Earned</span></h4>
+                            <h4><div id="rewards2">0.000</div><span>Alpha Earned</span></h4>
 
-                            <a href="#" class="btn-tras">Unlock Wallet</a>
+                            <a href="#" class="btn-tras locked-wallet" onclick="approveMethamask()">Unlock Wallet</a>
 
-                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span>0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span id="stakedBalance2">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> APY <span id="apy2">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Total Pickaxes Staked <span id="totalStaked2">0.000</span></h5>
 
-                            <div class="ppol-dt">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>APY: - Total Pickaxes Staked: <span>0.000</span></td>
-                                            <td>0.000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
                             <div class="pool_stake_unstake">
-                                <a href="#" class="btn-tras">Approve</a>
-                                <input type="number" name="" class="form-control">
-                                <a href="#" class="btn-tras">Unstake</a>
+                                <a class="btn-tras" id="approve_or_stake2" onclick="stake(2)">Approve</a>
+                                <input type="number" name="" id="tokenAmount2" class="form-control">
+                                <a class="btn-tras" onclick="unstake(2)">Unstake</a>
                             </div>
-                            <a href="#" class="btn-tras btn-withdraw">Withdraw</a>
+                            <a class="btn-tras btn-withdraw" onclick="harvest(2)">Withdraw</a>
                             <img src="images/diamond-2.png" alt="" class="frmshp2">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-lg-4">
+                <div class="col-md-6 col-sm-6 col-lg-4 blured">
                     <div class="pool-block">
                         <div class="pool-head">
-                            <h3>USDT/ETH <a href="https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7">Project Site <i class="fal fa-arrow-right"></i></a></h3>
+                            <h3>Alpha Pool <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
                         </div>
 
                         <div class="pool-img">
                             <img src="images/pool-img.png" alt="">
 
-                            <h4>0.000 <span>Diamonds Earned</span></h4>
+                            <h4><div id="rewards3">0.000</div><span>Alpha Earned</span></h4>
 
-                            <a href="#" class="btn-tras">Unlock Wallet</a>
+                            <a href="#" class="btn-tras locked-wallet" onclick="approveMethamask()">Unlock Wallet</a>
 
-                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span>0.000</span></h5>
-
-                            <div class="ppol-dt">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>APY: - Total Pickaxes Staked: <span>0.000</span></td>
-                                            <td>0.000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span id="stakedBalance3">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> APY <span id="apy3">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Total Syrup Staked <span id="totalStaked3">0.000</span></h5>
 
                             <div class="pool_stake_unstake">
-                                <a href="#" class="btn-tras">Approve</a>
-                                <input type="number" name="" class="form-control">
-                                <a href="#" class="btn-tras">Unstake</a>
+                                <a class="btn-tras" id="approve_or_stake3" onclick="stake(3)">Approve</a>
+                                <input type="number" name="" id="tokenAmount3" class="form-control">
+                                <a class="btn-tras" onclick="unstake(3)">Unstake</a>
                             </div>
-                            <a href="#" class="btn-tras btn-withdraw">Withdraw</a>
+                            <a class="btn-tras btn-withdraw" onclick="harvest(3)">Withdraw</a>
 
                             <img src="images/diamond-1.png" alt="" class="frmshp1 frmshp3">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-lg-4">
+                <div class="col-md-6 col-sm-6 col-lg-4 blured">
                     <div class="pool-block">
                         <div class="pool-head">
-                            <h3>Coming Soon <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
+                            <h3>Alpha Pool <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
                         </div>
 
                         <div class="pool-img">
                             <img src="images/pool-img.png" alt="">
 
-                            <h4>0.000 <span>Diamonds Earned</span></h4>
+                            <h4><div id="rewards4">0.000</div><span>Alpha Earned</span></h4>
 
-                            <a href="#" class="btn-tras">Unlock Wallet</a>
+                            <a href="#" class="btn-tras locked-wallet" onclick="approveMethamask()">Unlock Wallet</a>
 
-                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span>0.000</span></h5>
-
-                            <div class="ppol-dt">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>APY: - Total Pickaxes Staked: <span>0.000</span></td>
-                                            <td>0.000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span id="stakedBalance4">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> APY <span id="apy4">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Total Syrup Staked <span id="totalStaked4">0.000</span></h5>
 
                             <div class="pool_stake_unstake">
-                                <a href="#" class="btn-tras">Approve</a>
-                                <input type="number" name="" class="form-control">
-                                <a href="#" class="btn-tras">Unstake</a>
+                                <a class="btn-tras" id="approve_or_stake4" onclick="stake(4)">Approve</a>
+                                <input type="number" name="" id="tokenAmount4" class="form-control">
+                                <a class="btn-tras" onclick="unstake(4)">Unstake</a>
                             </div>
-                            <a href="#" class="btn-tras btn-withdraw">Withdraw</a>
+                            <a class="btn-tras btn-withdraw" onclick="harvest(4)">Withdraw</a>
 
                             <img src="images/diamond-2.png" alt="" class="frmshp2">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-lg-4">
+                <div class="col-md-6 col-sm-6 col-lg-4 blured">
                     <div class="pool-block">
                         <div class="pool-head">
-                            <h3>Coming Soon <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
+                            <h3>Alpha Pool <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
                         </div>
 
                         <div class="pool-img">
                             <img src="images/pool-img.png" alt="">
 
-                            <h4>0.000 <span>Diamonds Earned</span></h4>
+                            <h4><div id="rewards5">0.000</div><span>Alpha Earned</span></h4>
 
-                            <a href="#" class="btn-tras">Unlock Wallet</a>
+                            <a href="#" class="btn-tras locked-wallet" onclick="approveMethamask()">Unlock Wallet</a>
 
-                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span>0.000</span></h5>
-
-                            <div class="ppol-dt">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>APY: - Total Pickaxes Staked: <span>0.000</span></td>
-                                            <td>0.000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span id="stakedBalance5">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> APY <span id="apy5">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Total Syrup Staked <span id="totalStaked5">0.000</span></h5>
                             <div class="pool_stake_unstake">
-                                <a href="#" class="btn-tras">Approve</a>
-                                <input type="number" name="" class="form-control">
-                                <a href="#" class="btn-tras">Unstake</a>
+                                <a class="btn-tras" id="approve_or_stake5" onclick="stake(5)">Approve</a>
+                                <input type="number" name="" id="tokenAmount5" class="form-control">
+                                <a class="btn-tras" onclick="unstake(5)">Unstake</a>
                             </div>
-                            <a href="#" class="btn-tras btn-withdraw">Withdraw</a>
+                            <a class="btn-tras btn-withdraw" onclick="harvest(5)">Withdraw</a>
 
                             <img src="images/diamond-1.png" alt="" class="frmshp1 frmshp3">
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-lg-4">
+                <div class="col-md-6 col-sm-6 col-lg-4 blured">
                     <div class="pool-block">
                         <div class="pool-head">
-                            <h3>Coming Soon <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
+                            <h3>Alpha Pool <a href="#">Project Site <i class="fal fa-arrow-right"></i></a></h3>
                         </div>
 
                         <div class="pool-img">
                             <img src="images/pool-img.png" alt="">
 
-                            <h4>0.000 <span>Diamonds Earned</span></h4>
+                            <h4><div id="rewards6">0.000</div><span>Alpha Earned</span></h4>
 
-                            <a href="#" class="btn-tras">Unlock Wallet</a>
+                            <a href="#" class="btn-tras locked-wallet" onclick="approveMethamask()">Unlock Wallet</a>
 
-                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span>0.000</span></h5>
-
-                            <div class="ppol-dt">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>APY: - Total Pickaxes Staked: <span>0.000</span></td>
-                                            <td>0.000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Your Stake <span id="stakedBalance6">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> APY <span id="apy6">0.000</span></h5>
+                            <h5><img src="images/small-daimond-ic.png" alt=""> Total Syrup Staked <span id="totalStaked6">0.000</span></h5>
 
                             <div class="pool_stake_unstake">
-                                <a href="#" class="btn-tras">Approve</a>
-                                <input type="number" name="" class="form-control">
-                                <a href="#" class="btn-tras">Unstake</a>
+                                <a class="btn-tras" id="approve_or_stake6" onclick="stake(6)">Approve</a>
+                                <input type="number" name="" id="tokenAmount6" class="form-control">
+                                <a class="btn-tras" onclick="unstake(6)">Unstake</a>
                             </div>
-                            <a href="#" class="btn-tras btn-withdraw">Withdraw</a>
+                            <a class="btn-tras btn-withdraw" onclick="harvest(6)">Withdraw</a>
 
                             <img src="images/diamond-2.png" alt="" class="frmshp2">
                         </div>
@@ -384,8 +331,8 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <div class="openbt">
-                                <a href="#" class="btn-f">Approve Metamask <img src="images/nav-btn-ic.png" alt=""></a>
+                            <div class="openbt" id="methamask_status_2">
+                                <a onclick="approveMethamask()" class="btn-f" >Approve Metamask <img src="images/nav-btn-ic.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -395,8 +342,8 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="social-bx">
-                                <a href="https://t.me/diamondfarmGroup" target="_blank"><i class="far fa-paper-plane"></i></a>
-                                <a href="https://twitter.com/DiamondFarm2" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blank"><i class="far fa-paper-plane"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6">
@@ -438,5 +385,18 @@
     <script type="text/javascript" src="js/web3.min.js"></script>
     <script type="text/javascript" src="js/presale.js"></script>
     <script type="text/javascript" src="js/swap.js"></script>
+    <script type="text/javascript" src="js/stake_web3.js"></script>
+
+    <style id="locked_wallet" media="screen">
+      .blured :not(.locked-wallet)>  div :not(.locked-wallet){
+        filter:blur(2px) grayscale(.8);
+      }
+      .invest-form-blured > div > form :not(.invest-btn){
+        filter:blur(2px) grayscale(.8);
+      }
+      body > section.hero-banner-wrp > div > div > div:nth-child(2) > div > div > h1 {
+        filter:blur(2px) grayscale(.8);
+      }
+    </style>
 </body>
 </html>
